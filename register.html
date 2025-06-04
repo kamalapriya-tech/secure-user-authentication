@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>USER REGISTRATION</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: hsl(184, 45%, 51%);
+        }
+
+        .container {
+            width: 300px;
+            margin: 80px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom: 20px;
+        }
+
+        label, input {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: hsl(194, 56%, 47%);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: hsl(239, 60%, 33%);
+        }
+
+        .link {
+            text-align:center;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>USER REGISTRATION</h2>
+        <form method="POST" action="/register">
+            <label for="username">Username:</label>
+            <input type="text" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+            <label for="confirm email">Confirm Email:</label>
+             <input type="email" name="confirm email" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
+            <label for="phone no">Phone Number:</label>
+            <input type="number" name="number" required>
+            <label for="dob">DOB:</label>
+            <input type="date" name="date" required>
+            <input type="submit" value="Register">
+        </form>
+        <div class="link">
+            Already have an account? <a href="/">Login here</a>
+        </div>
+    </div>
+</body>
+</html>

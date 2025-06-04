@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: hsl(184, 45%, 51%);
+        }
+
+        .container {
+            width: 300px;
+            margin: 80px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom: 20px;
+        }
+
+        label, input {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: hsl(194, 56%, 47%);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: hsl(239, 80%, 39%);
+        }
+
+        .link {
+            text-align:center;
+            margin-top: 10px;
+        }
+    
+</style>
+<body> 
+     <div class="container">
+    <h2>LOGIN PAGE</h2>
+    <P>PLEASE FILL THE BELOW DETAILS</P>
+    <form method="POST" action="/login">
+        <label>Email:</label><br>
+        <input type="text" name="email"><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="password"><br><br>
+        <label>Confirm Password:</label><br>
+        <input type="password" name="confirm password"><br><br>
+        <input type="submit" value="Login">
+    </form>
+    <div class="link">
+</body>
+</html>
