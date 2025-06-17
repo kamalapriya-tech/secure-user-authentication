@@ -1,18 +1,22 @@
-from flask import Flask, render_template, request, redirect, url_for, session
-import mysql.connector
+rom flask import Flask, render_template, request, redirect, url_for, session
 from werkzeug.security import generate_password_hash, check_password_hash
+import mysql.connector
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Only works locally if .env file is present
 
 app = Flask(__name__)
-app.secret_key = 'KP'
+app.secret_key = os.environ.get("SECRET_KEY", "KP")
 
-# MySQL connection
+# MySQL connection using environment variables
 conn = mysql.connector.connect(
-    host='localhost',
-    user='root',
-    password='hello',
-    database='auth_system2'
+    host=os.environ.get("DB_HOST"),
+    user=os.environ.get("DB_USER"),
+    password=os.environ.get("DB_PASSWORD"),
+    database=os.environ.get("DB_NAME")
 )
-
+cursor = conn.cursor(dictionary=True)
 # Home/Login page
 @app.route('/')
 def home():
