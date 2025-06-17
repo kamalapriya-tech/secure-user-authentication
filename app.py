@@ -10,7 +10,7 @@ conn = mysql.connector.connect(
     host='localhost',
     user='root',
     password='hello',
-    database='auth_system1'
+    database='auth_system2'
 )
 
 # Home/Login page
@@ -29,14 +29,14 @@ def register():
         cursor = conn.cursor()
 
         # Check if email already exists
-        cursor.execute("SELECT * FROM users1 WHERE email = %s", (email,))
+        cursor.execute("SELECT * FROM users2 WHERE email = %s", (email,))
         if cursor.fetchone():
             cursor.close()
             return "Email already registered! <a href='/register'>Try again</a>"
 
         try:
             cursor.execute(
-                "INSERT INTO users1 (username, email, password) VALUES (%s, %s, %s)",
+                "INSERT INTO users2 (username, email, password) VALUES (%s, %s, %s)",
                 (username, email, password)
             )
             conn.commit()
@@ -56,7 +56,7 @@ def login():
     password = request.form['password']
 
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM users1 WHERE email = %s", (email,))
+    cursor.execute("SELECT * FROM users2 WHERE email = %s", (email,))
     user = cursor.fetchone()
     cursor.close()
 
