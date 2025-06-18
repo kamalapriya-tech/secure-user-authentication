@@ -1,0 +1,11 @@
+CREATE DATABASE auth_system2;
+
+USE auth_system2;
+
+CREATE TABLE users2(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(150) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL
+    
+);
