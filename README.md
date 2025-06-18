@@ -14,7 +14,8 @@ Proper session handling and redirection
 
 📌 Tools used: Python (Flask), MySQL Workbench, VS Code, HTML, CSS
 
-git clone https://github.com/kamalapriya-tech/secure-authentication.git
+git clone https://github.com/kamalapriya-tech/secure-user-authentication.git
+
 cd secure-authentication
 
 python app.py
